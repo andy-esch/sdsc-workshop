@@ -2,6 +2,9 @@
 
 Material largely written by Giulia Carella. Adapted by Andy Eschbacher.
 
+## Link here
+## http://bit.ly/sdsc-workshop-oct15
+
 ## Clone Github repository with workshop material
 
 `$ git clone git@github.com:andy-esch/sdsc-workshop.git`
