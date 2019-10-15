@@ -26,6 +26,16 @@ CheckInstallPackages <- function(pkgs){
 
    #Silently attempt to install into the default library
 
+    if(pkg=='INLA'){
+            install.packages('INLA', repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE)
+    }
+    if(pkg=='brinla'){
+        install_github("julianfaraway/brinla")
+    }
+    if(pkg=='INLAutils'){
+        install_github('timcdlucas/INLAutils', dep = FALSE)
+    }      
+      
    try(install.packages(pkg, lib=.Library,repos="http://cran.rstudio.com"))
 
    #Now attempt to load the package, catch error if it wasn't installed
@@ -61,19 +71,8 @@ CheckInstallPackages <- function(pkgs){
 
     #If this fails, raise the error back to the report
 
-    if(pkg!='INLA' & pkg!='brinla' & pkg!='INLAutils'){
-        install.packages(pkg, lib=personalLibPath, repos="http://cran.rstudio.com")
-    }
-    if(pkg=='INLA'){
-            install.packages('INLA', repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE)
-    }
-    if(pkg=='brinla'){
-        install_github("julianfaraway/brinla")
-    }
-    if(pkg=='INLAutils'){
-        install_github('timcdlucas/INLAutils', dep = FALSE)
-    }
-
+    install.packages(pkg, lib=personalLibPath, repos="http://cran.rstudio.com")
+    
     #Finally, attempt to load the package
 
     do.call("library", list(pkg))

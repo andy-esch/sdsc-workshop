@@ -8,6 +8,7 @@ Material largely written by Giulia Carella. Adapted by Andy Eschbacher.
 ## Clone Github repository with workshop material
 
 `$ git clone git@github.com:andy-esch/sdsc-workshop.git`
+`$ cd sdsc-workshop`
 
 ## Download and install docker
 
