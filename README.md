@@ -1,12 +1,10 @@
 # Material for the workshop `Spatial Modeling Problems & Decision Tree`
 
+Material largely written by Giulia Carella. Adapted by Andy Eschbacher.
+
 ## Clone Github repository with workshop material
 
-Download Git Large File System: https://git-lfs.github.com/
-
-and clone repository
-
-`git clone git@github.com:CartoDB/tech-workshops.git`
+`$ git clone git@github.com:andy-esch/sdsc-workshop.git`
 
 ## Download and install docker
 
